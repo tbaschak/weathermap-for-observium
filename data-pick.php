@@ -32,7 +32,7 @@ else
 
 $link = mysqli_connect($config['db_host'],$config['db_user'],$config['db_pass'])
                 or die('Could not connect: ' . mysqli_error());
-		mysqli_select_db($config['db_name'],$link) or die('Could not select database: '.mysqli_error());
+		mysqli_select_db($link,$config['db_name']) or die('Could not select database: '.mysqli_error());
 
 
 // ******************************************
